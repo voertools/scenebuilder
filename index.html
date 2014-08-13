@@ -3,22 +3,18 @@
 	<link rel=stylesheet href="main.css">
 </HEAD>
 <BODY>
-	<input type=checkbox id=help-hide>
-	<label for=help-hide id=help>
-		<p>Start a line with // to trigger the parser. It can find if-statements but don't use an else until the end. Or if it finds //merge it will collapse the if-tree. Right now, you can't nest if-statements.</p>
-		<p>All other text will be interpreted as if it were output text. Please leave all standard parser calls in [straight brackets]. Use {curly braces} for things the parser can't do. Also, it will fix your quotes and en-dashes (if you double--hyphen) for you. It also adds italics tags for quotes. Outside of quotes.however, you need to add the tags yourself as well as any bold tags.</p>
-		<p>This tool does not promise perfectly formatted code ready to just be dropped in. It's just to streamline some basic handling and get a first pass done, simple scenes will be perfectly fine here. Ideally, it should be ready to drop into a function and add some buttons.</p>
-		<p>We could even add an author tag if you put a name here!
-			<input type=text id=author>
-		</p>
-	</label>
-	<input type=checkbox id=code-hide>
+	<input disabled type=checkbox id=code-hide>
 	<div id=rich-container>
-		<label for=help-hide>Rich Text (click for help)</label>
-		<textarea id=rich-input></textarea>
+		<label for=help-hide>Rich Text</label>
+		<div id=flow></div>
+		<div contenteditable id=rich-input></div>
+		<div id=suggestion>
+			<p id=suggestion-input></p>
+			<ul id=suggestions></ul>
+		</div>
 	</div>
 	<div id=code-container>
-		<label for=code-hide>Code (click to expand)</label>
+		<label for=code-hide>Code (disabled)</label>
 		<textarea id=code-input></textarea>
 	</div>
 	<script src="app.js"></script>

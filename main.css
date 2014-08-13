@@ -4,32 +4,45 @@ html{
 }
 body{
 	background:#333E52;
+	color:#fff;
 	font-family:sans-serif;
 	margin:0;
 	padding:0;
 }
 #rich-container{
 	height:90vh;
+	overflow:hidden;
 	width:100vw;
 }
+#flow{
+	float:left;
+	height:100%;
+	width:20%;
+}
 #rich-input{
+	background:#3D5174;
+	color:#fff;
+	float:left;
 	font-family:inherit;
+	height:90%;
+	width:60%;
+}
+#suggestion{
+	float:right;
+	height:100%;
+	width:20%;
+}
+#suggestion-input{
+	text-align:center;
+}
+#suggestions{
+	list-style:none;
 }
 label{
 	background:#8D31B0;
-	color:#fff;
 	display:block;
 	padding: .5em 0;
 	text-align:center;
-}
-textarea{
-	background:#3D5174;
-	border:none;
-	color:#fff;
-	display:block;
-	height:90%;
-	margin:0 5%;
-	width:90%;
 }
 #code-hide,#help-hide{ display:none; }
 #code-hide:checked + #rich-container{
